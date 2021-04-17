@@ -1,15 +1,67 @@
 import React, { Component } from 'react'
 
 export default class Listings extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+
+    }
+  }
+
+  // video 23 @2:38s
+  loopListing() {
+    return (
+      <div className="col-md-3">
+        <div className="listing">
+          <div className="listing-img">
+            <span className="address">6969 Thot ave, Auckland, NZ 0021</span>
+            <div className="details">
+              <div className="col-md-3">
+                <div className="user-img"></div>
+              </div>
+              <div className="col-md-9">
+                <div className="user-details">
+                  <span className="user-name">Cookie Tapia</span>
+                  <span className="post-date">05/05/2021</span>
+                </div>
+                <div className="listing-details">
+                  <div className="floor-space">
+                    <i className="fa fa-square-o" aria-hidden="true"></i>
+                    <span>1000 ft&sup2;</span>
+                  </div>
+                  <div className="bedrooms">
+                    <i className="fa fa-bed" aria-hidden="true"></i>
+                    <span>3 beedrooms</span>
+                  </div>
+                </div>
+              </div>
+              <div className="view-btn">
+                View Listing
+                </div>
+            </div>
+          </div>
+          <div className="bottom-info">
+            <span className="price">$1000 / month</span>
+            <span className="location">
+              <i className="fa fa-map-marker" aria-hidden="true"></i>Auckland, NZ
+              </span>
+          </div>
+        </div>
+      </div>
+
+    )
+  }
+
   render() {
     return (
-      <section className="listings">
+      <section id="listings">
         <section className="search-area">
           <input type="text" name="search" />
         </section>
 
         <section className="sortby-area">
-          <div className="">390 results found</div>
+          <div className="results">390 results found</div>
 
           <div className="sort-options">
             <select name="sortby" className="sortby">
@@ -26,46 +78,66 @@ export default class Listings extends Component {
         </section>
 
         <section className="listings-results">
-          <div className="listing">
-            <div className="listing-img">
-              <span className="address">Address</span>
-              <div className="details">
-                <div className="user-img"></div>
 
-                <div className="user-details">
-                  <span className="user-name">Cookie Tapia</span>
-                  <span className="post-date">05/05/2021</span>
-                </div>
+          <div className="col-md-3">
 
-                <div className="listing-details">
-                  <div className="floor-space">
-                    <i className="fa fa-square-o" aria-hidden="true"></i>
-                    <span>1000 ft&sup2;</span>
-                  </div>
-                  <div className="bedrroms">
-                    <i className="fa fa-bed" aria-hidden="true"></i>
-                    <span>3 beedrooms</span>
+            <div className="listing">
+              <div className="listing-img">
+                <span className="address">6969 Thot ave, Auckland, NZ 0021</span>
+                <div className="details">
+
+                  <div className="col-md-3">
+                    <div className="user-img"></div>
                   </div>
 
-                </div>
+                  <div className="col-md-9">
+                    <div className="user-details">
+                      <span className="user-name">Cookie Tapia</span>
+                      <span className="post-date">05/05/2021</span>
+                    </div>
 
+                    <div className="listing-details">
+                      <div className="floor-space">
+                        <i className="fa fa-square-o" aria-hidden="true"></i>
+                        <span>1000 ft&sup2;</span>
+                      </div>
+                      <div className="bedrooms">
+                        <i className="fa fa-bed" aria-hidden="true"></i>
+                        <span>3 beedrooms</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div className="view-btn">
+                    View Listing
+                </div>
+                </div>
+              </div>
+
+              <div className="bottom-info">
+                <span className="price">$1000 / month</span>
+                <span className="location">
+                  <i className="fa fa-map-marker" aria-hidden="true"></i>Auckland, NZ
+              </span>
               </div>
             </div>
 
-            <div className="bottom-info">
-              <span>$1000 / month</span>
-              <span>
-                <i className="fa fa-map-marker" aria-hidden="true"></i>Auckland, NZ
-              </span>
-            </div>
           </div>
+
+
+
+
+
         </section>
 
-        <section className="pagination">
 
-          <ul className="pagination-nums">
+
+        <section id="pagination">
+
+          <ul className="pages">
             <li>Prev</li>
-            <li>1</li>
+            <li className="active">1</li>
             <li>2</li>
             <li>3</li>
             <li>4</li>

@@ -8,10 +8,10 @@ class Header extends Component {
           Logo
         </div>
         <nav>
-          <a href="#">Create Ads</a>
-          <a href="#">About Us</a>
-          <a href="#">Log in</a>
-          <a href="#" className="register-btn">Register</a>
+          <a >Create Ads</a>
+          <a >About Us</a>
+          <a >Log in</a>
+          <a className="register-btn">Register</a>
         </nav>
       </header>
     )
