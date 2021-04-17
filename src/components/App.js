@@ -11,7 +11,15 @@ class App extends Component {
     super();
 
     this.state = {
-      listingsData: listingsData
+      listingsData: listingsData,
+      min_price: 0,
+      max_price: 100000000,
+      min_floor_space: 0,
+      max_floor_space: 50000,
+      elvator: false,
+      finished_basment: false,
+      gym: false,
+      swimming_pool: false,
     }
 
     this.change = this.change.bind(this)
@@ -20,7 +28,7 @@ class App extends Component {
 
   change(e) {
     let name = e.target.name
-    let value = e.target.value
+    let value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
 
     this.setState({
       [name]: value
@@ -37,7 +45,7 @@ class App extends Component {
       <div>
         <Header />
         <section id="content-area">
-          <Filter change={this.change} />
+          <Filter change={this.change} globalState={this.state} />
           <Listings listingsData={this.state.listingsData} />
         </section>
       </div>

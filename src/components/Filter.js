@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
 
 export default class Filter extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+
+    }
+  }
+
+
   render() {
     return (
       <section id="filter">
@@ -15,24 +24,44 @@ export default class Filter extends Component {
             <option value="East Los Angeles">East Los Angeles</option>
             <option value="Auckland">Auckland</option>
           </select>
-          <select className="filters housetype" name="housetype">
-            <option>House</option>
+
+          <select
+            className="filters housetype"
+            name="housetype"
+            onChange={this.props.change}
+          >
+            <option value="House">House</option>
+            <option value="Ranch">Ranch</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Studio">Studio</option>
           </select>
-          <select className="filters bedrooms" name="bedrooms">
-            <option>4 BR</option>
+
+          <select
+            className="filters bedrooms"
+            name="bedrooms"
+            onChange={this.props.change}
+          >
+            <option value="1">1 BR</option>
+            <option value="2">2 BR</option>
+            <option value="3">3 BR</option>
+            <option value="4">4 BR</option>
           </select>
 
           <div className="filters price">
             <span className="title">Price</span>
             <input
               type="text"
-              name="min-price"
+              name="min_price"
               className="min-price"
+              onChange={this.props.change}
+              value={this.props.globalState.min_price}
             />
             <input
               type="text"
-              name="max-price"
+              name="max_price"
               className="max-price"
+              onChange={this.props.change}
+              value={this.props.globalState.max_price}
             />
           </div>
 
@@ -40,13 +69,17 @@ export default class Filter extends Component {
             <span className="title">Floor Space</span>
             <input
               type="text"
-              name="min-floor-space"
+              name="min_floor_space"
               className="min-floor-space"
+              onChange={this.props.change}
+              value={this.props.globalState.min_floor_space}
             />
             <input
               type="text"
-              name="max-floor-space"
+              name="max_floor_space"
               className="max-floor-space"
+              onChange={this.props.change}
+              value={this.props.globalState.max_floor_space}
             />
           </div>
 
@@ -56,19 +89,19 @@ export default class Filter extends Component {
           </span>
             <label htmlFor="extras">
               <span>Elevators</span>
-              <input value="elevators" name="extras" type="checkbox" />
+              <input value="elevators" name="elevators" type="checkbox" onChange={this.props.change} />
             </label>
             <label htmlFor="extras">
               <span>Swimming Pool</span>
-              <input value="swimming-pool" name="extras" type="checkbox" />
+              <input value="swimming_pool" name="swimming_pool" type="checkbox" onChange={this.props.change} />
             </label>
             <label htmlFor="extras">
               <span>Finished Basement</span>
-              <input value="finished basement" name="extras" type="checkbox" />
+              <input value="finished_basement" name="finished_basement" type="checkbox" onChange={this.props.change} />
             </label>
             <label htmlFor="extras">
               <span>Gym</span>
-              <input value="gym" name="extras" type="checkbox" />
+              <input value="gym" name="gym" type="checkbox" onChange={this.props.change} />
             </label>
           </div>
         </div>
