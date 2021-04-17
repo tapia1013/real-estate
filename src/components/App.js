@@ -13,16 +13,31 @@ class App extends Component {
     this.state = {
       listingsData: listingsData
     }
+
+    this.change = this.change.bind(this)
+  }
+
+
+  change(e) {
+    let name = e.target.name
+    let value = e.target.value
+
+    this.setState({
+      [name]: value
+    }, () => {
+      console.log(this.state);
+    })
+    // console.log(e.target.value);
   }
 
   render() {
-    console.log(this.state.data);
+    // console.log(this.state.data);
 
     return (
       <div>
         <Header />
         <section id="content-area">
-          <Filter />
+          <Filter change={this.change} />
           <Listings listingsData={this.state.listingsData} />
         </section>
       </div>

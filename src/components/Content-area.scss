@@ -7,6 +7,7 @@
 #filter {
   background: $grey;
   width: 30%;
+  height: 100vh;
   display: inline;
   float: left;
   
@@ -131,7 +132,7 @@
         font-weight: 300;
         border: 1px solid $lightgrey;
         background: transparent;
-        padding: 20px;
+        // padding: 20px;
         display: inline-block;
         margin-right: 15px;
         vertical-align: top;

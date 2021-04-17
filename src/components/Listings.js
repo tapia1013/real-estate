@@ -5,52 +5,58 @@ export default class Listings extends Component {
     super()
 
     this.state = {
-
     }
+
+    this.loopListings = this.loopListings.bind(this)
   }
 
-  // video 23 @2:38s
-  loopListing() {
-    return (
-      <div className="col-md-3">
-        <div className="listing">
-          <div className="listing-img">
-            <span className="address">6969 Thot ave, Auckland, NZ 0021</span>
-            <div className="details">
-              <div className="col-md-3">
-                <div className="user-img"></div>
-              </div>
-              <div className="col-md-9">
-                <div className="user-details">
-                  <span className="user-name">Cookie Tapia</span>
-                  <span className="post-date">05/05/2021</span>
+  // video 23 @4:47s
+  loopListings() {
+
+    const { listingsData } = this.props;
+
+    return listingsData.map((listing, index) => {
+      // console.log(listing);
+      return (
+        <div className="col-md-3" key={index}>
+          <div className="listing">
+            <div className="listing-img" style={{ background: `url("${listing.image}") no-repeat center center`, backgroundSize: `cover` }}>
+              <span className="address">{listing.address}</span>
+              <div className="details">
+                <div className="col-md-3">
+                  <div className="user-img"></div>
                 </div>
-                <div className="listing-details">
-                  <div className="floor-space">
-                    <i className="fa fa-square-o" aria-hidden="true"></i>
-                    <span>1000 ft&sup2;</span>
+                <div className="col-md-9">
+                  <div className="user-details">
+                    <span className="user-name">Cookie Tapia</span>
+                    <span className="post-date">05/05/2021</span>
                   </div>
-                  <div className="bedrooms">
-                    <i className="fa fa-bed" aria-hidden="true"></i>
-                    <span>3 beedrooms</span>
+                  <div className="listing-details">
+                    <div className="floor-space">
+                      <i className="fa fa-square-o" aria-hidden="true"></i>
+                      <span>1000 ft&sup2;</span>
+                    </div>
+                    <div className="bedrooms">
+                      <i className="fa fa-bed" aria-hidden="true"></i>
+                      <span>{listing.bedrooms}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="view-btn">
-                View Listing
+                <div className="view-btn">
+                  View Listing
                 </div>
+              </div>
+            </div>
+            <div className="bottom-info">
+              <span className="price">${listing.price}</span>
+              <span className="location">
+                <i className="fa fa-map-marker" aria-hidden="true"></i>{listing.city}, {listing.state}
+              </span>
             </div>
           </div>
-          <div className="bottom-info">
-            <span className="price">$1000 / month</span>
-            <span className="location">
-              <i className="fa fa-map-marker" aria-hidden="true"></i>Auckland, NZ
-              </span>
-          </div>
         </div>
-      </div>
-
-    )
+      )
+    })
   }
 
   render() {
@@ -79,54 +85,10 @@ export default class Listings extends Component {
 
         <section className="listings-results">
 
-          <div className="col-md-3">
-
-            <div className="listing">
-              <div className="listing-img">
-                <span className="address">6969 Thot ave, Auckland, NZ 0021</span>
-                <div className="details">
-
-                  <div className="col-md-3">
-                    <div className="user-img"></div>
-                  </div>
-
-                  <div className="col-md-9">
-                    <div className="user-details">
-                      <span className="user-name">Cookie Tapia</span>
-                      <span className="post-date">05/05/2021</span>
-                    </div>
-
-                    <div className="listing-details">
-                      <div className="floor-space">
-                        <i className="fa fa-square-o" aria-hidden="true"></i>
-                        <span>1000 ft&sup2;</span>
-                      </div>
-                      <div className="bedrooms">
-                        <i className="fa fa-bed" aria-hidden="true"></i>
-                        <span>3 beedrooms</span>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div className="view-btn">
-                    View Listing
-                </div>
-                </div>
-              </div>
-
-              <div className="bottom-info">
-                <span className="price">$1000 / month</span>
-                <span className="location">
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>Auckland, NZ
-              </span>
-              </div>
-            </div>
-
-          </div>
 
 
 
+          {this.loopListings()}
 
 
         </section>

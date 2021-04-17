@@ -9,10 +9,11 @@ export default class Filter extends Component {
           <select
             className="filters neighborhood"
             name="neighborhood"
+            onChange={this.props.change}
           >
-            <option>Boyle Heights</option>
-            <option>East Los Angeles</option>
-            <option>Auckland</option>
+            <option value="Boyle Heights">Boyle Heights</option>
+            <option value="East Los Angeles">East Los Angeles</option>
+            <option value="Auckland">Auckland</option>
           </select>
           <select className="filters housetype" name="housetype">
             <option>House</option>
@@ -53,19 +54,19 @@ export default class Filter extends Component {
             <span className="title">
               Extras
           </span>
-            <label for="extras">
+            <label htmlFor="extras">
               <span>Elevators</span>
               <input value="elevators" name="extras" type="checkbox" />
             </label>
-            <label for="extras">
+            <label htmlFor="extras">
               <span>Swimming Pool</span>
               <input value="swimming-pool" name="extras" type="checkbox" />
             </label>
-            <label for="extras">
+            <label htmlFor="extras">
               <span>Finished Basement</span>
               <input value="finished basement" name="extras" type="checkbox" />
             </label>
-            <label for="extras">
+            <label htmlFor="extras">
               <span>Gym</span>
               <input value="gym" name="extras" type="checkbox" />
             </label>
