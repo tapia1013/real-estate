@@ -15,6 +15,12 @@ export default class Listings extends Component {
 
     const { listingsData } = this.props;
 
+    if (listingsData == undefined || listingsData.length === 0) {
+      return "Sorry Your Filter Did Not Match Any Listings"
+    }
+
+
+
     return listingsData.map((listing, index) => {
       // console.log(listing);
       return (
