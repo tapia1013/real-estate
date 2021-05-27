@@ -9,6 +9,23 @@ export default class Filter extends Component {
     }
   }
 
+  componentWillMount() {
+    this.props.populateAction()
+  }
+
+  cities() {
+    return // VIDEO 27 @13:48SECONDS
+  }
+
+
+  homeTypes() {
+
+  }
+
+  bedrooms() {
+
+  }
+
 
   render() {
     return (

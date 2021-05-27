@@ -25,7 +25,8 @@ export default class App extends Component {
       finished_basment: false,
       gym: false,
       swimming_pool: false,
-      filteredData: listingsData
+      filteredData: listingsData,
+      populateForms: ''
     }
 
     this.change = this.change.bind(this)
@@ -78,7 +79,38 @@ export default class App extends Component {
 
 
   populateForms() {
+    // city
+    let cities = this.state.listingsData.map((item) => {
+      return item.city
+    })
+    cities = new Set(cities)
+    cities = [...cities]
 
+    // hometype
+    let homeTypes = this.state.listingsData.map((item) => {
+      return item.homeTypes
+    })
+    homeTypes = new Set(homeTypes)
+    homeTypes = [...homeTypes]
+
+    // bedrooms
+    let bedrooms = this.state.listingsData.map((item) => {
+      return item.bedrooms
+    })
+    bedrooms = new Set(bedrooms)
+    bedrooms = [...bedrooms]
+
+
+
+    this.setState({
+      populateForms: {
+        homeTypes,
+        bedrooms,
+        cities
+      }
+    }, () => {
+      console.log(this.state);
+    })
   }
 
 
@@ -91,7 +123,7 @@ export default class App extends Component {
       <div>
         <Header />
         <section id="content-area">
-          <Filter change={this.change} globalState={this.state} />
+          <Filter change={this.change} globalState={this.state} populateAction={this.populateForms} />
           <Listings listingsData={this.state.filteredData} />
         </section>
       </div>
