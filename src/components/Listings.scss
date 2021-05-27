@@ -37,3 +37,22 @@ header {
 
 
 
+$breakpoint-tablet: 480px;
+@media (max-width: $breakpoint-tablet) {
+  header {
+
+    nav {
+      
+      a {
+        
+        &.register-btn {
+          background: $pink;
+          padding: 7px 20px;
+          text-align: center;
+          color: white;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

@@ -3,21 +3,21 @@ var data = [
     address: '6969 Vicky Ave',
     city: 'Auckland',
     state: 'NZ',
-    rooms: 5,
+    bedrooms: 5,
     price: 8000000,
     floorSpace: 12000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'House',
+    homeType: 'Apartment',
     image: 'http://creativeoverflow.net/wp-content/uploads/2018/11/modern-homes.jpg'
   },
   {
     address: '1313 Main St',
     city: 'Boyle Heights',
     state: 'CA',
-    rooms: 3,
+    bedrooms: 3,
     price: 700000,
     floorSpace: 1500,
     extras: [],
@@ -28,7 +28,7 @@ var data = [
     address: '1734 East St',
     city: 'East Los Angeles',
     state: 'CA',
-    rooms: 4,
+    bedrooms: 4,
     price: 620000,
     floorSpace: 3500,
     extras: [
@@ -41,7 +41,7 @@ var data = [
     address: '1576 8th Pl',
     city: 'Boyle Heights',
     state: 'CA',
-    rooms: 2,
+    bedrooms: 2,
     price: 870000,
     floorSpace: 1300,
     extras: [
@@ -55,7 +55,7 @@ var data = [
     address: '4352 Nye Ave',
     city: 'Auckland',
     state: 'NZ',
-    rooms: 3,
+    bedrooms: 3,
     price: 850000,
     floorSpace: 2000,
     extras: [],
@@ -66,7 +66,7 @@ var data = [
     address: '98232 Cookie Blvd',
     city: 'Auckland',
     state: 'NZ',
-    rooms: 4,
+    bedrooms: 4,
     price: 300000,
     floorSpace: 2000,
     extras: [],
@@ -77,7 +77,7 @@ var data = [
     address: '6634 Winter St',
     city: 'Auckland',
     state: 'NZ',
-    rooms: 3,
+    bedrooms: 3,
     price: 150000,
     floorSpace: 800,
     extras: [
@@ -91,7 +91,7 @@ var data = [
     address: '1322 Simpson Ave',
     city: 'Auckland',
     state: 'NZ',
-    rooms: 3,
+    bedrooms: 3,
     price: 1900000,
     floorSpace: 5000,
     extras: [],
@@ -102,7 +102,7 @@ var data = [
     address: '2034 Vicky Ave',
     city: 'Auckland',
     state: 'NZ',
-    rooms: 3,
+    bedrooms: 3,
     price: 900000,
     floorSpace: 1800,
     extras: [
@@ -115,18 +115,18 @@ var data = [
     address: '4654 Gary Pl',
     city: 'Boyle Heights',
     state: 'CA',
-    rooms: 4,
+    bedrooms: 4,
     price: 650000,
     floorSpace: 1700,
     extras: [],
-    homeType: 'House',
+    homeType: 'Studio',
     image: 'https://ap.rdcpix.com/f242a1ba93af4bfc2d392c5eb30fedd1l-m323822769od-w1024_h768.jpg'
   },
   {
     address: '7634 69th St',
     city: 'Auckland',
     state: 'NZ',
-    rooms: 2,
+    bedrooms: 0,
     price: 75000,
     floorSpace: 1500,
     extras: [
@@ -138,4 +138,4 @@ var data = [
 ]
 
 
-export default data
+export default data;

@@ -6,15 +6,17 @@ import listingsData from './data/listingsData'
 import './App.scss'
 
 
-class App extends Component {
+
+
+export default class App extends Component {
   constructor() {
     super();
 
     this.state = {
       listingsData: listingsData,
-      neighborhood: 'Auckland',
-      homeType: 'House',
-      bedrooms: 1,
+      city: 'All',
+      homeType: 'All',
+      bedrooms: 0,
       min_price: 0,
       max_price: 100000000,
       min_floor_space: 0,
@@ -28,6 +30,7 @@ class App extends Component {
 
     this.change = this.change.bind(this)
     this.filteredData = this.filteredData.bind(this)
+    this.populateForms = this.populateForms.bind(this)
   }
 
 
@@ -47,12 +50,35 @@ class App extends Component {
 
   filteredData() {
     let newData = this.state.listingsData.filter((item) => {
-      return item.price >= this.state.min_price && item.price <= this.state.max_price && item.floorSpace >= this.state.min_floor_space && item.floorSpace <= this.state.max_floor_space
+      return item.price >= this.state.min_price && item.price <= this.state.max_price && item.floorSpace >= this.state.min_floor_space && item.floorSpace <= this.state.max_floor_space && item.bedrooms >= this.state.bedrooms
     })
+
+
+    // get data from above and filter it again
+    if (this.state.city !== "All") {
+      newData = newData.filter((item) => {
+        return item.city === this.state.city
+      })
+    }
+
+
+    // homeType
+    if (this.state.homeType !== "All") {
+      newData = newData.filter((item) => {
+        return item.homeType === this.state.homeType
+      })
+    }
+
 
     this.setState({
       filteredData: newData
     })
+  }
+
+
+
+  populateForms() {
+
   }
 
 
@@ -72,4 +98,3 @@ class App extends Component {
     )
   }
 }
-export default App;

@@ -10,12 +10,11 @@ export default class Listings extends Component {
     this.loopListings = this.loopListings.bind(this)
   }
 
-  // video 23 @4:47s
   loopListings() {
 
     const { listingsData } = this.props;
 
-    if (listingsData == undefined || listingsData.length === 0) {
+    if (listingsData === undefined || listingsData.length === 0) {
       return "Sorry Your Filter Did Not Match Any Listings"
     }
 

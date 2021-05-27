@@ -244,8 +244,8 @@
           margin-left: 20px;
           
           .user-name {
-            font-size: .9rem;
-            font-weight: 300;
+            font-size: 1rem;
+            font-weight: 400;
             display: block;
             color: rgba(255,255,255, 1);
             margin-top: 3px;
@@ -373,5 +373,173 @@
 .col-md-9 {
   width: 75%;
   display: inline-block;
+}
+
+
+
+
+$breakpoint-tablet: 480px;
+@media (max-width: $breakpoint-tablet) {
+  header {
+    background-color: red;
+    display: flex;
+    // width: 100%;
+    font-size: 0.9rem;
+    align-items: center;
+    justify-content: center;
+    
+    
+    nav {
+      display: flex;
+      
+      a {
+        font-size: 0.8rem;
+      }
+    }
+    
+  }
+  
+  
+  #content-area {
+    
+    #filter {
+      
+      .inside {
+        padding: 10px;
+        
+        h4 {
+          font-size: 1.2rem;
+          text-align: center;
+          letter-spacing: 3px;
+        }
+        
+        select {
+          font-size: 1rem;
+          padding: 5px;
+        }
+        
+        .filters {
+          
+          input {
+            display: block;
+            width: 100%;
+          }
+          
+          &.extras {
+            
+            label {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              width: 100%;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+    
+    #listings {
+      font-size: 0.3rem;
+      padding: 10px;
+      
+      .search-area {
+        input {
+          width: 95%;
+        }
+      }
+      
+      .sortby-area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        
+        
+        
+        .results {
+          width: 25%;
+        }
+        
+        .sort-options {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          select {
+            padding: 5px;
+          }
+          
+          .sortby {
+            
+            
+          }
+          
+          
+          .view {
+            display: none;
+            .fa {
+              
+            }
+            
+          }
+          
+          
+        }
+      }
+      
+      #pagination {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        
+        
+        .pages {
+          width: 80%;
+          margin-bottom: 20px;
+          
+          li {
+            padding: 10px 15px;
+            font-size: 1rem;
+            
+          }
+        }
+      }
+    }
+    
+    .listings-results {
+      display: flex;
+      flex-direction: column;
+      
+      
+      .listing-img {
+        
+        .address {
+          font-size: 1.2rem;
+          
+        }
+        
+        .details {
+          padding: 3px 20px;
+          
+        }
+        
+      }
+    }
+  }
+  
+  .col-md-3 {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0px 0px 20px;
+    
+    
+  }
+
+  .col-md-9 {
+    width: 75%;
+    display: inline-block;
+  }
 }
 
